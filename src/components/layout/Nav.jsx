@@ -1,5 +1,6 @@
 import { Button, Dropdown, Menu, Navbar } from "react-daisyui";
 import { Link, NavLink } from "react-router-dom";
+import LogoutButton from "../auth/logout/LogoutButton";
 
 function Nav() {
 	return (

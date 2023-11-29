@@ -21,7 +21,7 @@ function LoginForm() {
 					<ValidationMessage>Error goes here</ValidationMessage>
 				</div>
 				<div className="form-control w-full max-w-md mx-auto">
-					<button class="bg-secondary hover:bg-primary mt-2 text-white font-bold py-4 px-4 rounded">Button</button>
+					<button className="bg-secondary hover:bg-primary mt-2 text-white font-bold py-4 px-4 rounded">Button</button>
 				</div>
 			</form>
 		</div>
