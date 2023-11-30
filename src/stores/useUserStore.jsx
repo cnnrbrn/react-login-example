@@ -5,16 +5,19 @@ const useUserStore = create(
 	persist(
 		(set) => ({
 			user: null,
-			actions: {
-				setUser: (user) => set({ user }),
-				clearUser: () => set({ user: null }),
-			},
+			setUser: (user) => set({ user }),
+			clearUser: () => set({ user: null }),
 		}),
-		{ name: "user" }
+		{
+			name: "user",
+		}
 	)
 );
 
-// export const useUser = () => useUserStore((state) => state.user);
+//export const useUser = () => useUserStoreBase((state) => state.user);
 export const useToken = () => useUserStore((state) => state.user?.accessToken);
 
-export const useUserActions = () => useUserStore((state) => state.actions);
+export const useUserActions = () => {
+	const { setUser, clearUser } = useUserStore();
+	return { setUser, clearUser };
+};

@@ -2,17 +2,13 @@ import { Button } from "react-daisyui";
 import { useNavigate } from "react-router-dom";
 import { useUserActions } from "../../../stores/useUserStore";
 
-console.log(useUserActions);
-
 function LogoutButton() {
-	const actions = useUserActions();
-
-	console.log("actions", actions);
+	const { clearUser } = useUserActions();
 
 	const navigate = useNavigate();
 
 	function handleLogout() {
-		// clearUser();
+		clearUser();
 		navigate("/");
 	}
 
